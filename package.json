@@ -1,0 +1,36 @@
+{
+  "name": "ng2Init",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run tsc:w\" \"npm run lite\"",
+    "lite": "lite-server",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "typings": "typings",
+    "postinstall": "typings install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/common": "^4.3.0",
+    "@angular/compiler": "^4.3.0",
+    "@angular/core": "^4.3.0",
+    "@angular/forms": "^4.3.0",
+    "@angular/http": "^4.3.0",
+    "@angular/platform-browser": "^4.3.0",
+    "@angular/platform-browser-dynamic": "^4.3.0",
+    "@angular/router": "^4.3.0",
+    "@angular/upgrade": "^4.3.0",
+    "concurrently": "^3.5.0",
+    "core-js": "^2.4.1",
+    "lite-server": "^2.3.0",
+    "reflect-metadata": "^0.1.10",
+    "rxjs": "^5.4.2",
+    "systemjs": "^0.20.15",
+    "typescript": "^2.4.1",
+    "zone.js": "^0.8.14"
+  }
+}
