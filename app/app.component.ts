@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Http, Headers,RequestOptions } from '@angular/http';
 
 @Component ({
@@ -8,7 +8,7 @@ import { Http, Headers,RequestOptions } from '@angular/http';
     Insert :: <button (click)="insertInTo()">insert</button>`
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit {
     output = 'Hello World !!';
     username:String;
     data:any;
@@ -16,6 +16,15 @@ export class AppComponent {
     options:RequestOptions;
     constructor(public http: Http) {
 
+    }
+
+    ngOnInit() {
+        this.http.get("//localhost/angularServer/get.php").subscribe(
+            data => {
+                //let dat = JSON.parse(data);
+                console.log(data.json())},
+            err => console.log(err.json().message)
+        );
     }
 
     insertInTo() {
